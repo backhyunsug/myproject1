@@ -31,7 +31,7 @@ pipeline {
                     sh "docker rm ${DOCKER_IMAGE} || true"
                     
                     // 새 이미지로 컨테이너 실행 (8080 포트와 80 포트를 연결)
-                    sh "docker run -d --name ${DOCKER_IMAGE} -p 80:8080 ${DOCKER_IMAGE}:${DOCKER_TAG}"
+                    sh "docker run --name ${DOCKER_IMAGE}
                 }
             }
         }
